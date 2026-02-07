@@ -1,0 +1,5 @@
+2026-02-07 21:39:41 | User: 1 | ModuleId: CYL_01 |ModuleName: Conveyor | IsActive: True (was False) | PSI: 95 (was 90)
+2026-02-07 21:49:53 | User: 1 | ModuleId: CNV_01 |ModuleName: Conveyor | IsActive: True (was False) | Speed: 45 (was 45) | Direction: 1 (was 1)
+2026-02-07 21:49:53 | User: 1 | ModuleId: CNV_02 |ModuleName: Conveyor | IsActive: True (was False) | Speed: 20 (was 20) | Direction: 0 (was 0)
+2026-02-07 21:50:12 | User: 1 | ModuleId: CNV_01 |ModuleName: Conveyor | IsActive: False (was True) | Speed: 45 (was 45) | Direction: 1 (was 1)
+2026-02-07 22:02:15 | User: 1 | ModuleId: CNV_01 |ModuleName: Conveyor | IsActive: True (was False) | Speed: 450 (was 45) | Direction: 1 (was 1)

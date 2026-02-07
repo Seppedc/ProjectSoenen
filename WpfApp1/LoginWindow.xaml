@@ -1,0 +1,21 @@
+﻿<Window x:Class="ProjectSoenen.LoginWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ProjectSoenen"
+        mc:Ignorable="d"
+        Title="LoginWindow" Height="450" Width="800">
+    <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Width="300">
+        <TextBlock Text="Machine Login" FontSize="24" FontWeight="Bold" Margin="0,0,0,20" HorizontalAlignment="Center"/>
+
+        <TextBlock Text="Username:"/>
+        <TextBox x:Name="TxtUsername" Margin="0,5,0,10" Height="25"/>
+
+        <TextBlock Text="Password:"/>
+        <PasswordBox x:Name="TxtPassword" Margin="0,5,0,20" Height="25"/>
+
+        <Button Content="Login" Click="BtnLogin_Click" Height="30" Background="DodgerBlue" Foreground="White" FontWeight="Bold"/>
+        <TextBlock x:Name="LblError" Foreground="Red" Margin="0,10,0,0" HorizontalAlignment="Center"/>
+    </StackPanel>
+</Window>

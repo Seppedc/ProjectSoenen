@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<MachineConfig>
+  <MachineName>Frame Cutter Machine</MachineName>
+  <Modules>
+    <Module Type="Conveyor" Id="CNV_01" IsActive="true">
+      <Parameters>
+        <Parameter Name="Speed" Value="45" />
+        <Parameter Name="Direction" Value="1" />
+      </Parameters>
+    </Module>
+    <Module Type="Saw" Id="SAW_01" IsActive="true">
+      <Parameters>
+        <Parameter Name="BladeSpeed" Value="350" />
+        <Parameter Name="SawAngle" Value="45" />
+      </Parameters>
+    </Module>
+    <Module Type="Conveyor" Id="CNV_02" IsActive="true">
+      <Parameters>
+        <Parameter Name="Speed" Value="20" />
+        <Parameter Name="Direction" Value="0" />
+      </Parameters>
+    </Module>
+  </Modules>
+</MachineConfig>

@@ -1,0 +1,59 @@
+﻿<UserControl x:Class="WpfApp1.Modules.ConveyorControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="150" d:DesignWidth="300">
+    <Border BorderThickness="2" CornerRadius="8" Margin="10" Padding="15">
+        <Border.Style>
+            <Style TargetType="Border">
+                <Setter Property="BorderBrush" Value="ForestGreen"/>
+                <Setter Property="Background" Value="#F0FFF0"/>
+                <Style.Triggers>
+                    <DataTrigger Binding="{Binding IsActive}" Value="False">
+                        <Setter Property="Background" Value="#E0E0E0"/>
+                        <Setter Property="BorderBrush" Value="#A9A9A9"/>
+                        <Setter Property="Opacity" Value="0.7"/>
+                    </DataTrigger>
+                </Style.Triggers>
+            </Style>
+        </Border.Style>
+
+        <StackPanel>
+            <DockPanel LastChildFill="False" Margin="0,0,0,10">
+                <StackPanel Orientation="Horizontal" DockPanel.Dock="Left">
+                    <TextBlock Text="CONVEYOR UNIT" FontWeight="Bold" FontSize="14" 
+                               Foreground="ForestGreen" VerticalAlignment="Center"/>
+                    <TextBlock Text="{Binding ModuleId}" Margin="10,0,0,0" 
+                               Foreground="Gray" VerticalAlignment="Center"/>
+                </StackPanel>
+
+                <CheckBox IsChecked="{Binding IsActive, UpdateSourceTrigger=PropertyChanged}" 
+                          Content="Enabled" 
+                          DockPanel.Dock="Right" 
+                          VerticalAlignment="Center" 
+                          FontWeight="SemiBold"/>
+            </DockPanel>
+
+            <Grid IsEnabled="{Binding IsActive}">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+
+                <Label Content="Speed (m/s):" Grid.Row="0" Grid.Column="0" VerticalAlignment="Center"/>
+                <TextBox x:Name="TxtSpeed" Text="{Binding Speed, UpdateSourceTrigger=PropertyChanged}" 
+                         Grid.Row="0" Grid.Column="1" Margin="5" Width="80" HorizontalAlignment="Left"/>
+
+                <Label Content="Direction (1/0):" Grid.Row="1" Grid.Column="0" VerticalAlignment="Center"/>
+                <TextBox x:Name="TxtDirection" Text="{Binding Direction, UpdateSourceTrigger=PropertyChanged}" 
+                         Grid.Row="1" Grid.Column="1" Margin="5" Width="80" HorizontalAlignment="Left"/>
+            </Grid>
+        </StackPanel>
+    </Border>
+</UserControl>
